@@ -7,5 +7,4 @@ export const Contacts = styled.ul`
   gap: 10px;
   padding-left: 15px;
 
-  
 `;

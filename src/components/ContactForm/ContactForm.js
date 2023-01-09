@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Form, Label, Input, Button } from './ContactForm.styled';
-import { addContact } from 'redux/operations';
-import { selectContacts } from 'redux/selectors';
+import { addContact } from 'redux/contacts/operations';
+import { selectContacts } from 'redux/contacts/selectors';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setNumber] = useState('');
 
   const contacts = useSelector(selectContacts) 
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ export const ContactForm = () => {
 
     const form = event.target;
     const name = form.elements.name.value;
-    const phone = form.elements.phone.value;
+    const number = form.elements.number.value;
 
     const newContact = contacts.find(contact => contact.name === name);
     if (newContact) {
@@ -24,9 +24,9 @@ export const ContactForm = () => {
       return;
     }
 
-    dispatch(addContact({name, phone}));
+    dispatch(addContact({name, number}));
     setName('')
-    setPhone('')
+    setNumber('')
 
     form.reset();
   };
@@ -37,8 +37,8 @@ export const ContactForm = () => {
       case 'name':
         setName(value);
         break;
-      case 'phone':
-        setPhone(value);
+      case 'number':
+        setNumber(value);
         break;
       default:
         return;
@@ -64,9 +64,9 @@ export const ContactForm = () => {
         <span>Number</span>
         <Input
           type="tel"
-          name="phone"
+          name="number"
           onChange={handleChange}
-          value={phone}
+          value={number}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
