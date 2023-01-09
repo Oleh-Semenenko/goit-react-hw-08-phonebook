@@ -23,7 +23,7 @@ export const App = () => {
       <ContactForm />
       <SecondaryTitle>Contacts</SecondaryTitle>
       <Filter />
-      {isLoading && !error && <p>Request in progress...</p>}
+      {isLoading && !error && <p>Request in progress....</p>}
       {error && <p>Something goes wrong</p>}
       <ContactList />
     </Container>
