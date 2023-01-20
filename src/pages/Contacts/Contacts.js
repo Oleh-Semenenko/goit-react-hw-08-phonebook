@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
-import { selectError, selectIsLoading } from 'redux/contacts/selectors';
+import { selectError } from 'redux/contacts/selectors';
 
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
@@ -10,7 +10,6 @@ import { Box, Flex, Heading, Container } from '@chakra-ui/react';
 
 export default function Contacts() {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
 
   useEffect(() => {
@@ -48,7 +47,6 @@ export default function Contacts() {
               Contacts
             </Heading>
             <Filter />
-            {/* {isLoading && !error && <p>Request in progress....</p>} */}
             {error && <p>Something goes wrong</p>}
             <Box overflowY="auto" h="230px">
               <ContactList />

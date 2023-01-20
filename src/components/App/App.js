@@ -23,7 +23,12 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
+        <Route
+          index
+          element={
+            <PrivateRoute component={<HomePage />} redirectTo="/login" />
+          }
+        />
         <Route
           path="/register"
           element={
