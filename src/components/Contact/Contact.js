@@ -18,7 +18,7 @@ export const Contact = ({ id, name, number }) => {
   const firstLetter = name.charAt(0);
 
   return (
-    <Flex
+    <Flex as='li'
       borderBottom="1px"
       paddingY="8px"
       justify="space-between"

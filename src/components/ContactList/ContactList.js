@@ -7,7 +7,7 @@ export const ContactList = () => {
   const contacts = useSelector(selectVisibleContacts);
 
   return (
-    <UnorderedList padding="8px">
+    <UnorderedList paddingX="10px" m='0'>
       {contacts.map(({ id, name, number }) => {
         return <Contact key={id} id={id} name={name} number={number} />;
       })}

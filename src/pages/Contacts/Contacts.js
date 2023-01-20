@@ -48,7 +48,7 @@ export default function Contacts() {
             </Heading>
             <Filter />
             {error && <p>Something goes wrong</p>}
-            <Box overflowY="auto" h="230px">
+            <Box overflowY="auto" h="230px" >
               <ContactList />
             </Box>
           </Box>

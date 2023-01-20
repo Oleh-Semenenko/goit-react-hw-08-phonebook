@@ -9,14 +9,9 @@ import {
   refreshUserFulfilledReducer,
   refreshUserRejectedReducer,
   anyPendingReducer,
-  anyFullfilledReducer,
+  anyFulfilledReducer,
   anyRejectedReducer,
 } from './authSliceReducers';
-
-const extraActions = [register, logIn, logOut, refreshUser];
-
-const getActions = type => isAnyOf(...extraActions.map(action => action[type]));
-
 
 
 const initialState = {
@@ -40,12 +35,18 @@ const authSlise = createSlice({
       .addCase(refreshUser.pending, refreshUserPendingReducer)
       .addCase(refreshUser.fulfilled, refreshUserFulfilledReducer)
       .addCase(refreshUser.rejected, refreshUserRejectedReducer)
-      .addMatcher(getActions('pending'), anyPendingReducer)
+      .addMatcher(
+        isAnyOf(register.pending, logIn.pending, logOut.pending),
+        anyPendingReducer
+      )
       .addMatcher(
         isAnyOf(register.fulfilled, logIn.fulfilled),
-        anyFullfilledReducer
+        anyFulfilledReducer
       )
-      .addMatcher(getActions('rejected'), anyRejectedReducer),
+      .addMatcher(
+        isAnyOf(register.rejected, logIn.rejected, logOut.rejected),
+        anyRejectedReducer
+      ),
 });
 
 export const authReducer = authSlise.reducer;

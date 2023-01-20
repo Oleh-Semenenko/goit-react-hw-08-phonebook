@@ -38,7 +38,7 @@ export const anyPendingReducer = state => {
   state.isLoading = true;
 };
 
-export const anyFullfilledReducer = state => {
+export const anyFulfilledReducer = state => {
   state.isLoggedIn = true;
   state.isLoading = false;
 };
