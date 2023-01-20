@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.0a1d5f4f.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.283d10d4.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.075882bd.js",
     "static/js/75.3560e1a4.chunk.js": "/goit-react-hw-08-phonebook/static/js/75.3560e1a4.chunk.js",
     "static/js/649.622ad076.chunk.js": "/goit-react-hw-08-phonebook/static/js/649.622ad076.chunk.js",
     "static/js/989.9e24a1b7.chunk.js": "/goit-react-hw-08-phonebook/static/js/989.9e24a1b7.chunk.js",
-    "static/js/204.a158a8b6.chunk.js": "/goit-react-hw-08-phonebook/static/js/204.a158a8b6.chunk.js",
+    "static/js/204.e3ca4f2a.chunk.js": "/goit-react-hw-08-phonebook/static/js/204.e3ca4f2a.chunk.js",
     "static/js/606.0b63db15.chunk.js": "/goit-react-hw-08-phonebook/static/js/606.0b63db15.chunk.js",
     "static/media/videoBg.mp4": "/goit-react-hw-08-phonebook/static/media/videoBg.c1619010090b8809fdf9.mp4",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.0a1d5f4f.css.map": "/goit-react-hw-08-phonebook/static/css/main.0a1d5f4f.css.map",
-    "main.283d10d4.js.map": "/goit-react-hw-08-phonebook/static/js/main.283d10d4.js.map",
+    "main.075882bd.js.map": "/goit-react-hw-08-phonebook/static/js/main.075882bd.js.map",
     "75.3560e1a4.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/75.3560e1a4.chunk.js.map",
     "649.622ad076.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/649.622ad076.chunk.js.map",
     "989.9e24a1b7.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/989.9e24a1b7.chunk.js.map",
-    "204.a158a8b6.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/204.a158a8b6.chunk.js.map",
+    "204.e3ca4f2a.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/204.e3ca4f2a.chunk.js.map",
     "606.0b63db15.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/606.0b63db15.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0a1d5f4f.css",
-    "static/js/main.283d10d4.js"
+    "static/js/main.075882bd.js"
   ]
 }
