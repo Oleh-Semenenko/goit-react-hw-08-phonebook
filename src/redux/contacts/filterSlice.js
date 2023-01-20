@@ -7,21 +7,12 @@ const filterSlice = createSlice({
   name: 'filter',
   initialState: filterInitialState,
   reducers: {
-    setFilterValue: {
-      reducer(_, action) {
-        return action.payload;
-      },
-      prepare(value) {
-        return {
-          payload: value,
-        };
-      },
+    setFilterValue(state, action) {
+      return (state = action.payload);
     },
   },
   extraReducers: builder =>
-    builder.addCase(logOut.fulfilled, state => {
-      state = '';
-    }),
+    builder.addCase(logOut.fulfilled, state => (state = '')),
 });
 
 export const { setFilterValue } = filterSlice.actions;

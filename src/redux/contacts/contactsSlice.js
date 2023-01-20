@@ -33,8 +33,6 @@ const contactsSlice = createSlice({
       .addCase(deleteContact.fulfilled, deleteContactFulfilledReducer)
       .addCase(logOut.fulfilled, state => {
         state.items = [];
-        state.error = null;
-        state.isLoading = false;
       })
       .addMatcher(getActions('pending'), anyPendingReducer)
       .addMatcher(getActions('fulfilled'), anyFullfilledReducer)
