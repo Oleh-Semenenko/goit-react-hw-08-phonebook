@@ -6,7 +6,7 @@ import { selectError, selectIsLoading } from 'redux/contacts/selectors';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
 import { Filter } from 'components/Filter/Filter';
-import { Container, Title, SecondaryTitle } from './Contacts.styled';
+import { Box, Flex, Heading, Container } from '@chakra-ui/react';
 
 export default function Contacts() {
   const dispatch = useDispatch();
@@ -18,14 +18,44 @@ export default function Contacts() {
   }, [dispatch]);
 
   return (
-    <Container>
-      <Title>Phonebook</Title>
-      <ContactForm />
-      <SecondaryTitle>Contacts</SecondaryTitle>
-      <Filter />
-      {isLoading && !error && <p>Request in progress....</p>}
-      {error && <p>Something goes wrong</p>}
-      <ContactList />
-    </Container>
+    <Box as="main" paddingY="20px" bg="#F1F1F1" h="100vh">
+      <Container maxW="100%" marginX="auto" paddingX="44px" bg="#F1F1F1">
+        <Heading
+          align="center"
+          mb="44px"
+          fontFamily="Merriweather Sans"
+          fontWeight={400}
+          fontSize="36px"
+        >
+          Phonebook
+        </Heading>
+        <Flex gap="32px" justify="space-between">
+          <ContactForm />
+          <Box
+            border="1px"
+            borderColor="#000"
+            padding="20px"
+            width="50%"
+            h="380px"
+          >
+            <Heading
+              align="center"
+              fontFamily="Merriweather Sans"
+              fontWeight={400}
+              fontSize="32px"
+              mb="20px"
+            >
+              Contacts
+            </Heading>
+            <Filter />
+            {/* {isLoading && !error && <p>Request in progress....</p>} */}
+            {error && <p>Something goes wrong</p>}
+            <Box overflowY="auto" h="230px">
+              <ContactList />
+            </Box>
+          </Box>
+        </Flex>
+      </Container>
+    </Box>
   );
 }
